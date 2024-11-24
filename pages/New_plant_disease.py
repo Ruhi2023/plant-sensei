@@ -119,7 +119,7 @@ if gen_exist("generate_dis") and gak != "":
         generation_config = {
         "temperature": 0.9,
         "top_p": 0.95,
-        "top_k": 64,
+        "top_k": 20, # the api change today 24 Nov,2024 onlu allows for between 1-41 tokens it was 64 before so gave error
         "max_output_tokens": int(1024*8),
         "response_mime_type": "text/plain",  }
         model = genai.GenerativeModel(model_name="gemini-1.5-flash",generation_config=generation_config)
